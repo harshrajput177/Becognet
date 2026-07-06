@@ -1,0 +1,304 @@
+.sap-section{
+padding:40px 40px;
+
+background:linear-gradient(180deg,#2c86db,#2279cf);
+}
+
+.sap-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width:1350px;
+width:100%;
+margin:auto;
+position:relative;
+}
+
+.Sec-module-tag{
+width:120px;
+margin:auto;
+padding:7px 18px;
+border:2px solid rgba(255,255,255,.7);
+border-radius:50px;
+color:#fff;
+font-size:12px;
+text-align:center;
+margin-bottom:30px;
+}
+
+.Sec-heading{
+text-align:center;
+font-size:65px;
+font-weight:300;
+color:#fff;
+line-height:1.2;
+margin-bottom:70px;
+}
+
+.Sec-heading span{
+font-weight:bold;
+}
+
+.Sec-cards{
+position:relative;
+width:1180px;
+max-width:100%;
+margin:auto;
+height:600px;
+}
+
+.Sec-module-card{
+display:flex;
+position:absolute;
+width:100%;
+height:450px;
+background:white;
+border-radius:25px;
+overflow:hidden;
+box-shadow:0 20px 50px rgba(0,0,0,.18);
+transition:.5s;
+}
+
+
+.Sec-module-card:hover{
+transform:translateY(-10px);
+}
+
+.Sec-card1{
+    width: 90%;
+top:0;
+background:#b8d2f2;
+opacity:.35;
+  border: 0.1px solid rgb(236, 236, 236);
+  z-index: 2 !important;
+left: 40px;
+  --r: 30px;
+  --s: 24px;
+  --x: 40px;
+  --y: 35px;
+
+  border-radius: var(--r);
+
+  /* ===== MASK ===== */
+  --_m: /calc(2*var(--r)) calc(2*var(--r)) radial-gradient(#000 70%, #0000 72%);
+  --_g: conic-gradient(at calc(100% - var(--r)) var(--r), #0000 25%, #000 0);
+  --_d: (var(--s) + var(--r));
+
+  mask:
+    calc(100% - var(--_d) - var(--x)) 0 var(--_m),
+    100% calc(var(--_d) + var(--y)) var(--_m),
+    radial-gradient(var(--s) at 100% 0, #0000 99%, #000 calc(100% + 1px)) calc(-1*var(--r) - var(--x)) calc(var(--r) + var(--y)),
+    var(--_g) calc(-1*var(--_d) - var(--x)) 0,
+    var(--_g) 0 calc(var(--_d) + var(--y));
+
+  mask-repeat: no-repeat;
+}
+
+.Sec-card2{
+    left: 0;
+top:145px;
+z-index:3;
+  position: relative;
+  border: 0.1px solid rgb(236, 236, 236);
+  z-index: 100 !important;
+
+  --r: 30px;
+  --s: 24px;
+  --x: 40px;
+  --y: 35px;
+
+  border-radius: var(--r);
+
+  /* ===== MASK ===== */
+  --_m: /calc(2*var(--r)) calc(2*var(--r)) radial-gradient(#000 70%, #0000 72%);
+  --_g: conic-gradient(at calc(100% - var(--r)) var(--r), #0000 25%, #000 0);
+  --_d: (var(--s) + var(--r));
+
+  mask:
+    calc(100% - var(--_d) - var(--x)) 0 var(--_m),
+    100% calc(var(--_d) + var(--y)) var(--_m),
+    radial-gradient(var(--s) at 100% 0, #0000 99%, #000 calc(100% + 1px)) calc(-1*var(--r) - var(--x)) calc(var(--r) + var(--y)),
+    var(--_g) calc(-1*var(--_d) - var(--x)) 0,
+    var(--_g) 0 calc(var(--_d) + var(--y));
+
+  mask-repeat: no-repeat;
+
+}
+
+
+.Sec-left{
+width:55%;
+}
+
+.Sec-left img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.Sec-right{
+width:45%;
+padding:55px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+}
+
+.Sec-right h2{
+font-size:36px;
+margin-bottom:20px;
+color:#1d3762;
+}
+
+.Sec-right p{
+font-size:17px;
+color:#666;
+line-height:1.7;
+margin-bottom:35px;
+}
+
+.Sec-right button{
+width:160px;
+height:50px;
+border:none;
+border-radius:40px;
+background:#fff;
+border:1px solid #ddd;
+cursor:pointer;
+font-size:15px;
+display:flex;
+justify-content:center;
+align-items:center;
+gap:10px;
+transition:.3s;
+}
+
+.Sec-right button:hover{
+background:#2f7ed8;
+color:white;
+}
+
+.Sec-number{
+position:absolute;
+right:25px;
+top:30px;
+font-size:28px;
+font-weight:bold;
+color:#fff;
+}
+
+.Sec-card3 .Sec-number{
+color:#2d7fd8;
+}
+
+
+
+@media (max-width:767px){
+
+.sap-section{
+    padding:45px 16px;
+}
+
+.Sec-module-tag{
+    margin-bottom:20px;
+}
+
+.Sec-heading{
+    font-size:32px;
+    margin-bottom:35px;
+}
+
+.Sec-cards{
+
+    position:static;
+    height:auto;
+
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+
+}
+
+/* Remove overlapping */
+
+.Sec-card1,
+.Sec-card2{
+
+    position:relative;
+    top:0;
+    left:0;
+
+    width:100%;
+    height:auto;
+
+    opacity:1;
+
+    mask:none;
+    -webkit-mask:none;
+
+}
+
+.Sec-module-card{
+
+    position:relative;
+
+    display:flex;
+    flex-direction:column;
+
+    height:auto;
+
+    border-radius:18px;
+
+}
+
+.Sec-left{
+
+    width:100%;
+    height:240px;
+
+}
+
+.Sec-left img{
+
+    width:100%;
+    height:100%;
+    object-fit:cover;
+
+}
+
+.Sec-right{
+
+    width:100%;
+    padding:25px 20px;
+
+}
+
+.Sec-right h2{
+
+    font-size:24px;
+
+}
+
+.Sec-right p{
+
+    font-size:15px;
+    margin-bottom:20px;
+
+}
+
+.Sec-right button{
+
+    width:150px;
+    height:46px;
+
+}
+
+.Sec-number{
+
+    top:18px;
+    right:20px;
+    font-size:22px;
+
+}
+
+}

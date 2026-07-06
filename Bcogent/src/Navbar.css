@@ -1,0 +1,162 @@
+@import url('https://googleapis.com');
+
+.Navbar-main-cont{
+    width:100%;
+    background:#fff;
+    box-shadow:0 5px 18px rgba(0,0,0,.08);
+    position:sticky;
+    top:0;
+    left:0;
+    z-index:999;
+}
+
+.nav-cont{
+    max-width:1350px;
+    height:90px;
+    margin:auto;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:0 20px;
+}
+
+.image-logo{
+    width:180px;
+    cursor:pointer;
+}
+
+.nav-list{
+    display:flex;
+    align-items:center;
+    gap:45px;
+    list-style:none;
+}
+
+.nav-list li{
+    font-size:18px;
+    font-weight:500;
+    font-family:'Poppins',sans-serif;
+    cursor:pointer;
+    position:relative;
+    transition:.3s;
+}
+
+.nav-list li:hover{
+    color:#0B5CCB;
+}
+
+.nav-list li::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-6px;
+    width:0;
+    height:2px;
+    background:#0B5CCB;
+    transition:.3s;
+}
+
+.nav-list li:hover::after{
+    width:100%;
+}
+
+.menu-icon{
+    display:none;
+    font-size:30px;
+    cursor:pointer;
+}
+
+
+@media(max-width:1024px){
+
+.nav-list{
+    gap:25px;
+}
+
+.nav-list li{
+    font-size:16px;
+}
+
+.image-logo{
+    width:160px;
+}
+
+}
+
+
+@media(max-width:768px){
+
+.Navbar-main-cont{
+    padding:0;
+}
+
+.nav-cont{
+    height:80px;
+}
+
+.image-logo{
+    width:150px;
+}
+
+.menu-icon{
+    display:block;
+    z-index:1001;
+}
+
+.nav-list{
+
+    position:fixed;
+
+    top:80px;
+    right:-100%;
+
+    width:280px;
+    height:calc(100vh - 80px);
+
+    background:#fff;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    align-items:flex-start;
+
+    padding:40px 30px;
+    gap:28px;
+
+    transition:.4s ease;
+
+    box-shadow:-8px 0 25px rgba(0,0,0,.12);
+
+}
+
+.nav-list.active{
+    right:0;
+}
+
+.nav-list li{
+    font-size:18px;
+    width:100%;
+    border-bottom:1px solid #ececec;
+    padding-bottom:12px;
+}
+
+}
+
+
+@media(max-width:480px){
+
+.nav-cont{
+    padding:0 15px;
+}
+
+.image-logo{
+    width:135px;
+}
+
+.nav-list{
+    width:100%;
+}
+
+}

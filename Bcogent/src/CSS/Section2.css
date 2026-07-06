@@ -1,0 +1,395 @@
+@import url('https://googleapis.com');
+
+.supply-section{
+
+max-width:1350px;
+margin:auto;
+padding:80px 20px;
+
+display:grid;
+grid-template-columns:420px 1fr;
+gap:60px;
+align-items:center;
+
+}
+
+
+.title{
+
+display:flex;
+flex-direction:column;
+  font-family: 'Poppins', sans-serif;
+
+}
+
+.title span{
+  font-family: 'Poppins', sans-serif;
+font-size:76px;
+font-weight:700;
+line-height:1;
+color:#1c4c96;
+position:relative;
+display:inline-block;
+width:max-content;
+
+opacity:0;
+transform:translateY(70px);
+
+}
+
+.title span:first-child{
+
+color:#000;
+
+}
+
+.active span{
+
+animation:fadeUp .8s forwards;
+
+}
+
+.active span:nth-child(1){
+animation-delay:.2s;
+}
+
+.active span:nth-child(2){
+animation-delay:.4s;
+}
+
+.active span:nth-child(3){
+animation-delay:.6s;
+}
+
+.active span:nth-child(4){
+animation-delay:.8s;
+}
+
+.active span:nth-child(5){
+animation-delay:1s;
+}
+
+.active span::after{
+
+animation:lineGrow .8s forwards;
+
+}
+
+.active span:nth-child(1)::after{
+animation-delay:.4s;
+}
+
+.active span:nth-child(2)::after{
+animation-delay:.6s;
+}
+
+.active span:nth-child(3)::after{
+animation-delay:.8s;
+}
+
+.active span:nth-child(4)::after{
+animation-delay:1s;
+}
+
+.active span:nth-child(5)::after{
+animation-delay:1.2s;
+}
+
+.bottom-line{
+
+margin-top:40px;
+
+width:180px;
+height:4px;
+
+background:#f3ab1d;
+
+animation:expand 2s infinite alternate;
+
+}
+
+
+.features{
+
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:22px;
+
+margin-bottom:35px;
+
+}
+
+.features div{
+
+display:flex;
+gap:10px;
+align-items:flex-start;
+
+font-size:17px;
+color:#444;
+
+opacity:0;
+transform:translateY(30px);
+
+animation:fade .8s forwards;
+
+}
+
+.features div:nth-child(1){
+animation-delay:.3s;
+}
+
+.features div:nth-child(2){
+animation-delay:.5s;
+}
+
+.features div:nth-child(3){
+animation-delay:.7s;
+}
+
+.features div:nth-child(4){
+animation-delay:.9s;
+}
+
+.features i{
+
+color:#1d67d7;
+font-size:18px;
+
+}
+
+.discover-btn{
+
+margin:25px 0 40px;
+
+padding:14px 30px;
+
+border:none;
+outline:none;
+
+border-radius:40px;
+
+background:#f2a61c;
+color:#111;
+
+font-size:15px;
+font-weight:700;
+
+cursor:pointer;
+
+transition:.35s;
+
+}
+
+.discover-btn:hover{
+
+transform:translateY(-5px);
+
+box-shadow:0 15px 35px rgba(242,166,28,.4);
+
+}
+
+.progress-item{
+
+margin-bottom:35px;
+
+}
+
+.label{
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+margin-bottom:10px;
+
+}
+
+.label h3{
+font-family: 'Poppins', sans-serif;
+font-size:20px;
+color:#333;
+
+}
+
+.label span{
+  font-family: 'Poppins', sans-serif;
+font-weight:700;
+color:#666;
+
+}
+
+.progress-bar{
+
+height:10px;
+
+background:#ececec;
+
+border-radius:40px;
+
+overflow:hidden;
+
+}
+
+.progress-fill{
+
+height:100%;
+
+width:0%;
+
+border-radius:40px;
+
+background:linear-gradient(
+90deg,
+#10b9ff,
+#53d6c9,
+#9ed18b,
+#f4b425
+);
+
+position:relative;
+
+transition:width 2.3s cubic-bezier(.19,1,.22,1);
+
+}
+
+.progress-fill::after{
+
+content:"";
+
+position:absolute;
+
+top:0;
+left:-50%;
+
+width:40%;
+height:100%;
+
+background:rgba(255,255,255,.5);
+
+filter:blur(8px);
+
+animation:shine 2s infinite linear;
+
+}
+
+.check-icon{
+    width:18px;
+    height:18px;
+    min-width:18px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    border-radius:50%;
+    background:#0b5ed7;
+
+    color:#fff !important;
+    font-size:8px;
+
+    margin-top:3px;
+}
+
+@keyframes fadeUp{
+
+to{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+}
+
+@keyframes lineGrow{
+
+to{
+
+transform:scaleX(1);
+
+}
+
+}
+
+@keyframes fade{
+
+to{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+}
+
+@keyframes shine{
+
+100%{
+
+left:120%;
+
+}
+
+}
+
+@keyframes expand{
+
+from{
+
+width:130px;
+
+}
+
+to{
+
+width:180px;
+
+}
+
+}
+
+
+
+.fa-solid-in{
+    width: 10px;
+}
+
+
+@media(max-width:991px){
+
+.supply-section{
+
+grid-template-columns:1fr;
+
+}
+
+.title span{
+
+font-size:60px;
+
+}
+
+.features{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+@media(max-width:600px){
+
+.title span{
+  font-family: 'Poppins', sans-serif;
+font-size:46px;
+
+}
+
+.label h3{
+  font-family: 'Poppins', sans-serif;
+font-size:18px;
+
+}
+
+}
